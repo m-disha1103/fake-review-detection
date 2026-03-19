@@ -14,27 +14,35 @@ except Exception as e:
 @app.route('/', methods=['GET', 'POST'])
 def home():
     result = ""
-    
+    confidence = 0
+    fake_prob = 0
+    real_prob = 0
+
     if request.method == 'POST':
         review = request.form['review']
-        
+
         try:
             vec = vectorizer.transform([review])
             prediction = model.predict(vec)[0]
-            prob = model.predict_proba(vec)[0]
 
-            confidence = max(prob) * 100
+            if hasattr(model, "predict_proba"):
+                prob = model.predict_proba(vec)[0]
+                confidence = max(prob) * 100
+                fake_prob = prob[1] * 100
+                real_prob = prob[0] * 100
 
-            if prediction == 1:
-                result = "❌ Fake Review"
-            else:
-                result = "✅ Genuine Review"
+            result = "❌ Fake Review" if prediction == 1 else "✅ Genuine Review"
 
         except Exception as e:
             result = "Error: " + str(e)
-            confidence = 0
 
-    return render_template('index.html', result=result, confidence=round(confidence, 2))
+    return render_template(
+        'index.html',
+        result=result,
+        confidence=round(confidence, 2),
+        fake_prob=round(fake_prob, 2),
+        real_prob=round(real_prob, 2)
+    )
 
 import os
 

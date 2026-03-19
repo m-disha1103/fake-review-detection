@@ -113,6 +113,11 @@
     {% if result %}
         <div class="result">{{ result }}</div>
         <div class="confidence">Confidence: {{ confidence }}%</div>
+
+        <div class="confidence">
+            Fake Probability: {{ fake_prob }}% <br>
+            Genuine Probability: {{ real_prob }}%
+        </div>
     {% endif %}
 </div>
 
