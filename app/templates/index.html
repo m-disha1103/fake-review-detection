@@ -82,8 +82,16 @@
     </style>
 
     <script>
-        function showLoader() {
+        function validateAndLoad() {
+            let text = document.querySelector("textarea").value;
+
+            if (text.trim() === "") {
+                alert("Please enter a review!");
+                return false;
+            }
+
             document.getElementById("loader").style.display = "block";
+            return true;
         }
 
         function toggleDarkMode() {
@@ -102,7 +110,7 @@
 <div class="container">
     <h1>🧠 Fake Review Detector</h1>
 
-    <form method="POST" onsubmit="showLoader()">
+    <form method="POST" onsubmit="return validateAndLoad()">
         <textarea name="review" rows="5" placeholder="Enter your review..."></textarea>
         <br><br>
         <button type="submit">Analyze Review</button>
@@ -111,8 +119,13 @@
     <div id="loader" class="loader"></div>
 
     {% if result %}
-        <div class="result">{{ result }}</div>
-        <div class="confidence">Confidence: {{ confidence }}%</div>
+        <div class="result" style="color: {% if 'Fake' in result %}red{% else %}green{% endif %};">
+            {{ result }}
+        </div>
+
+        <div class="confidence">
+            Confidence: {{ confidence }}%
+        </div>
 
         <div class="confidence">
             Fake Probability: {{ fake_prob }}% <br>
