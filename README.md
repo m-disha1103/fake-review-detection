@@ -99,7 +99,7 @@ python app/app.py
 
 ```
 Example:
-![App Screenshot](screenshot.png)
+![App Screenshot](demo.png)
 ```
 
 ---
