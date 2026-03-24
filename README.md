@@ -94,13 +94,7 @@ python app/app.py
 ---
 
 ## 📸 Screenshot
-
-(Add your app screenshot here)
-
-```
-Example:
 ![App Screenshot](demo.png)
-```
 
 ---
 
