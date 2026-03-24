@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 # Load model safely
 try:
-    model = pickle.load(open('../model/model.pkl', 'rb'))
-    vectorizer = pickle.load(open('../model/vectorizer.pkl', 'rb'))
+    model = pickle.load(open('model/model.pkl', 'rb'))
+    vectorizer = pickle.load(open('model/vectorizer.pkl', 'rb'))
     print("Model loaded successfully ✅")
 except Exception as e:
     print("Error loading model:", e)
