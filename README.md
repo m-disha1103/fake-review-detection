@@ -1,29 +1,29 @@
-# 🧠 Fake Review Detection System
+# Fake Review Detection System
 
 An AI-powered web application that detects whether an online review is **Fake ❌** or **Genuine ✅** using Natural Language Processing (NLP) and Machine Learning.
 
 ---
 
-## 🚀 Live Demo
+## Live Demo
 
 🌐 https://fake-review-detection-8en8.onrender.com
 
 ---
 
-## 📌 Features
+## Features
 
-* 🔍 Detects fake vs genuine reviews
-* 🧠 Uses NLP (Text Cleaning + TF-IDF)
-* 🤖 Machine Learning model (Logistic Regression)
-* 🌙 Dark mode support
-* ⏳ Loading animation
-* 📊 Confidence score & probability display
-* ⚠️ Input validation
-* 🌐 Fully deployed web application
+* Detects fake vs genuine reviews
+* Uses NLP (Text Cleaning + TF-IDF)
+* Machine Learning model (Logistic Regression)
+* Dark mode support
+* Loading animation
+* Confidence score & probability display
+* Input validation
+* Fully deployed web application
 
 ---
 
-## 🛠️ Tech Stack
+##Tech Stack
 
 * **Frontend:** HTML, CSS, JavaScript
 * **Backend:** Python (Flask)
@@ -34,7 +34,7 @@ An AI-powered web application that detects whether an online review is **Fake �
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 fake-review-detector/
@@ -62,7 +62,7 @@ fake-review-detector/
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 1. User enters a review
 2. Text is cleaned and preprocessed
@@ -75,7 +75,7 @@ fake-review-detector/
 
 ---
 
-## ▶️ Run Locally
+## Run Locally
 
 ```bash
 # Clone repository
@@ -98,7 +98,7 @@ python app/app.py
 
 ---
 
-## 📊 Model Details
+## Model Details
 
 * Algorithm: Logistic Regression
 * Feature Extraction: TF-IDF
@@ -107,19 +107,19 @@ python app/app.py
 
 ---
 
-## 🚧 Future Improvements
+## Future Improvements
 
-* 🔥 Use advanced models (BERT, Transformers)
-* 📱 Make UI fully responsive
-* 📊 Add analytics dashboard
-* 🧠 Improve dataset quality
-* 🔐 Add security & API layer
+* Use advanced models (BERT, Transformers)
+* Make UI fully responsive
+* Add analytics dashboard
+* Improve dataset quality
+* Add security & API layer
 
 ---
 
-## 👩‍💻 Author
+## Author
 
-**Disha Malviya**
+**Disha Malviya (m-disha1103)**
 
 ---
 
